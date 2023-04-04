@@ -5,22 +5,26 @@ subject:
     age:
       iso8601duration: "P65Y"
   sex: "MALE"
+  karyotypicSex: "UNKNOWN_KARYOTYPE"
 phenotypicFeatures:
 - type:
     id: "HP:0008994"
     label: "Proximal muscle weakness in lower limbs"
+  excluded: false
   onset:
     age:
       iso8601duration: "P65Y"
 - type:
     id: "HP:0007289"
     label: "Limb fasciculations"
+  excluded: false
   onset:
     age:
       iso8601duration: "P65Y"
 - type:
     id: "HP:0008956"
     label: "Proximal lower limb amyotrophy"
+  excluded: false
   onset:
     age:
       iso8601duration: "P65Y"
@@ -34,18 +38,21 @@ phenotypicFeatures:
 - type:
     id: "HP:0003391"
     label: "Gowers sign"
+  excluded: false
   onset:
     age:
       iso8601duration: "P65Y"
 - type:
     id: "HP:0003551"
     label: "Difficulty climbing stairs"
+  excluded: false
   onset:
     age:
       iso8601duration: "P65Y"
 - type:
     id: "HP:0006886"
     label: "Impaired distal vibration sensation"
+  excluded: false
   onset:
     age:
       iso8601duration: "P65Y"
@@ -56,12 +63,12 @@ measurements:
   value:
     quantity:
       unit:
-        id: "UCUM:U/L"
+        id: "UCUM:U.L-1"
         label: "enzyme unit per liter"
       value: 4292.0
       referenceRange:
         unit:
-          id: "UCUM:U/L"
+          id: "UCUM:U.L-1"
           label: "enzyme unit per liter"
         low: 20.0
         high: 200.0
@@ -71,12 +78,12 @@ measurements:
   value:
     quantity:
       unit:
-        id: "UCUM:U/L"
+        id: "UCUM:U.L-1"
         label: "enzyme unit per liter"
       value: 234.0
       referenceRange:
         unit:
-          id: "UCUM:U/L"
+          id: "UCUM:U.L-1"
           label: "enzyme unit per liter"
         low: 4.0
         high: 36.0
@@ -84,12 +91,14 @@ diseases:
 - term:
     id: "MONDO:0005148"
     label: "type 2 diabetes mellitus"
+  excluded: false
   onset:
     age:
       iso8601duration: "P55Y"
 - term:
     id: "MONDO:0001134"
     label: "essential hypertension"
+  excluded: false
   onset:
     age:
       iso8601duration: "P55Y"
@@ -113,6 +122,7 @@ medicalActions:
       interval:
         start: "2010-09-02T00:00:00Z"
         end: "2020-09-02T00:00:00Z"
+    drugType: "UNKNOWN_DRUG_TYPE"
   adverseEvents:
   - id: "HP:0003198"
     label: "Myopathy"
@@ -138,6 +148,7 @@ medicalActions:
       interval:
         start: "2010-09-02T00:00:00Z"
         end: "2020-09-02T00:00:00Z"
+    drugType: "UNKNOWN_DRUG_TYPE"
 - treatment:
     agent:
       id: "DrugCentral:2356"
@@ -157,6 +168,7 @@ medicalActions:
       interval:
         start: "2010-09-02T00:00:00Z"
         end: "2020-09-02T00:00:00Z"
+    drugType: "UNKNOWN_DRUG_TYPE"
 - treatment:
     agent:
       id: "DrugCentral:1725"
@@ -176,6 +188,7 @@ medicalActions:
       interval:
         start: "2010-09-02T00:00:00Z"
         end: "2020-09-02T00:00:00Z"
+    drugType: "UNKNOWN_DRUG_TYPE"
 - treatment:
     agent:
       id: "NCIT:C121331"
@@ -186,7 +199,7 @@ medicalActions:
     doseIntervals:
     - quantity:
         unit:
-          id: "UCUM:g/kg"
+          id: "UCUM:g.kg-1"
           label: "gram per kilogram"
         value: 1.6
       scheduleFrequency:
@@ -195,6 +208,7 @@ medicalActions:
       interval:
         start: "2020-09-02T00:00:00Z"
         end: "2021-03-02T00:00:00Z"
+    drugType: "UNKNOWN_DRUG_TYPE"
   responseToTreatment:
     id: "NCIT:C123584"
     label: "Favorable Response"
@@ -205,15 +219,39 @@ metaData:
   - id: "ncit"
     name: "NCI Thesaurus"
     url: "http://purl.obolibrary.org/obo/ncit.owl"
-    version: "22.03d"
+    version: "21.05d"
     namespacePrefix: "NCIT"
     iriPrefix: "http://purl.obolibrary.org/obo/NCIT_"
   - id: "hp"
     name: "human phenotype ontology"
     url: "http://purl.obolibrary.org/obo/hp.owl"
-    version: "2021-08-02"
+    version: "2022-06-11"
     namespacePrefix: "HP"
     iriPrefix: "http://purl.obolibrary.org/obo/HP_"
+  - id: "loinc"
+    name: "Logical Observation Identifiers Names and Codes"
+    url: "https://loinc.org"
+    version: "2.73"
+    namespacePrefix: "LOINC"
+    iriPrefix: "https://loinc.org/"
+  - id: "ucum"
+    name: "Unified Code for Units of Measure"
+    url: "https://ucum.org"
+    version: "2.1"
+    namespacePrefix: "UCUM"
+    iriPrefix: "https://units-of-measurement.org/"
+  - id: "mondo"
+    name: "Mondo Disease Ontology"
+    url: "http://purl.obolibrary.org/obo/mondo.obo"
+    version: "2022-04-04"
+    namespacePrefix: "MONDO"
+    iriPrefix: "http://purl.obolibrary.org/obo/MONDO_"
+  - id: "drugcentral"
+    name: "Drug Central"
+    url: "https://drugcentral.org/"
+    version: "2022-08-22"
+    namespacePrefix: "DrugCentral"
+    iriPrefix: "https://drugcentral.org/drugcard/"
   phenopacketSchemaVersion: "2.0.0"
   externalReferences:
   - id: "PMID:32444443"

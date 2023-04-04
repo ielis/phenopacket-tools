@@ -10,16 +10,19 @@ subject:
       id: "MONDO:0014138"
       label: "nemaline myopathy 8"
   sex: "MALE"
+  karyotypicSex: "UNKNOWN_KARYOTYPE"
 phenotypicFeatures:
 - type:
     id: "HP:0001558"
     label: "Decreased fetal movement"
+  excluded: false
   onset:
     gestationalAge:
       weeks: 23
 - type:
     id: "HP:0025672"
     label: "Fetal skin edema"
+  excluded: false
   onset:
     gestationalAge:
       weeks: 32
@@ -27,6 +30,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0010557"
     label: "Overlapping fingers"
+  excluded: false
   onset:
     gestationalAge:
       weeks: 32
@@ -34,6 +38,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0001561"
     label: "Polyhydramnios"
+  excluded: false
   modifiers:
   - id: "HP:0012827"
     label: "Borderline"
@@ -44,6 +49,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0030931"
     label: "1-minute APGAR score of 4"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -51,6 +57,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0030922"
     label: "5-minute APGAR score of 2"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -58,6 +65,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0033469"
     label: "10-minute APGAR score of 1"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -65,6 +73,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0012027"
     label: "Laryngeal edema"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -72,6 +81,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0001290"
     label: "Generalized hypotonia"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -85,6 +95,7 @@ biosamples:
   - type:
       id: "HP:0003798"
       label: "Nemaline bodies"
+    excluded: false
   procedure:
     code:
       id: "NCIT:C51895"
@@ -107,6 +118,7 @@ interpretations:
       interpretationStatus: "CAUSATIVE"
       variantInterpretation:
         acmgPathogenicityClassification: "PATHOGENIC"
+        therapeuticActionability: "UNKNOWN_ACTIONABILITY"
         variationDescriptor:
           id: "rs397509420"
           variation:
@@ -137,6 +149,7 @@ interpretations:
       interpretationStatus: "CAUSATIVE"
       variantInterpretation:
         acmgPathogenicityClassification: "PATHOGENIC"
+        therapeuticActionability: "UNKNOWN_ACTIONABILITY"
         variationDescriptor:
           id: "rs778022582"
           variation:
@@ -182,7 +195,7 @@ metaData:
   - id: "mondo"
     name: "Mondo Disease Ontology"
     url: "http://purl.obolibrary.org/obo/mondo.obo"
-    version: "v2022-04-04"
+    version: "2022-04-04"
     namespacePrefix: "MONDO"
     iriPrefix: "http://purl.obolibrary.org/obo/MONDO_"
   - id: "uberon"
@@ -191,4 +204,10 @@ metaData:
     version: "2021-07-27"
     namespacePrefix: "UBERON"
     iriPrefix: "http://purl.obolibrary.org/obo/UBERON_"
+  - id: "geno"
+    name: "Genotype Ontology"
+    url: "http://purl.obolibrary.org/obo/geno.owl"
+    version: "2022-03-05"
+    namespacePrefix: "GENO"
+    iriPrefix: "http://purl.obolibrary.org/obo/GENO_"
   phenopacketSchemaVersion: "2.0.0"

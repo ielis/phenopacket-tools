@@ -5,10 +5,12 @@ subject:
     age:
       iso8601duration: "P4D"
   sex: "MALE"
+  karyotypicSex: "UNKNOWN_KARYOTYPE"
 phenotypicFeatures:
 - type:
     id: "HP:0034248"
     label: "Increased fetal lens echogenicity"
+  excluded: false
   onset:
     gestationalAge:
       weeks: 27
@@ -24,18 +26,21 @@ phenotypicFeatures:
 - type:
     id: "HP:0000369"
     label: "Low-set ears"
+  excluded: false
   onset:
     age:
       iso8601duration: "P4D"
 - type:
     id: "HP:0008936"
     label: "Axial hypotonia"
+  excluded: false
   onset:
     age:
       iso8601duration: "P4D"
 - type:
     id: "HP:0000568"
     label: "Microphthalmia"
+  excluded: false
   onset:
     age:
       iso8601duration: "P4D"
@@ -43,6 +48,7 @@ diseases:
 - term:
     id: "MONDO:0016649"
     label: "Warburg micro syndrome"
+  excluded: false
   onset:
     age:
       iso8601duration: "P4D"

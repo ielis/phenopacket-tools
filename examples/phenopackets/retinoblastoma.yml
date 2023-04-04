@@ -10,6 +10,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0030084"
     label: "Clinodactyly"
+  excluded: false
   modifiers:
   - id: "HP:0012834"
     label: "Right"
@@ -19,6 +20,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0000555"
     label: "Leukocoria"
+  excluded: false
   modifiers:
   - id: "HP:0012835"
     label: "Left"
@@ -28,6 +30,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0000486"
     label: "Strabismus"
+  excluded: false
   modifiers:
   - id: "HP:0012835"
     label: "Left"
@@ -37,6 +40,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0000541"
     label: "Retinal detachment"
+  excluded: false
   modifiers:
   - id: "HP:0012835"
     label: "Left"
@@ -55,7 +59,7 @@ measurements:
       value: 25.0
       referenceRange:
         unit:
-          id: "56844-4"
+          id: "LOINC:56844-4"
           label: "Intraocular pressure of Eye"
         low: 10.0
         high: 21.0
@@ -73,7 +77,7 @@ measurements:
       value: 15.0
       referenceRange:
         unit:
-          id: "56844-4"
+          id: "LOINC:56844-4"
           label: "Intraocular pressure of Eye"
         low: 10.0
         high: 21.0
@@ -89,9 +93,11 @@ biosamples:
   - type:
       id: "NCIT:C35941"
       label: "Flexner-Wintersteiner Rosette Formation"
+    excluded: false
   - type:
       id: "NCIT:C132485"
       label: "Apoptosis and Necrosis"
+    excluded: false
   measurements:
   - assay:
       id: "LOINC:33728-7"
@@ -144,21 +150,24 @@ interpretations:
         acmgPathogenicityClassification: "PATHOGENIC"
         therapeuticActionability: "ACTIONABLE"
         variationDescriptor:
+          id: "variant-id"
           variation:
             copyNumber:
-              allele:
-                sequenceLocation:
+              derivedSequenceExpression:
+                location:
                   sequenceId: "refseq:NC_000013.14"
                   sequenceInterval:
                     startNumber:
                       value: "25981249"
                     endNumber:
                       value: "61706822"
+                reverseComplement: false
               number:
                 value: "1"
           extensions:
           - name: "mosaicism"
             value: "40.0%"
+          moleculeContext: "unspecified_molecule_context"
     - subjectOrBiosampleId: "biosample.1"
       interpretationStatus: "CAUSATIVE"
       variantInterpretation:
@@ -203,6 +212,7 @@ diseases:
 - term:
     id: "NCIT:C7541"
     label: "Retinoblastoma"
+  excluded: false
   onset:
     age:
       iso8601duration: "P4M"
@@ -235,6 +245,7 @@ medicalActions:
       interval:
         start: "2020-09-02T00:00:00Z"
         end: "2020-09-02T00:00:00Z"
+    drugType: "UNKNOWN_DRUG_TYPE"
   treatmentTarget:
     id: "NCIT:C7541"
     label: "Retinoblastoma"
@@ -315,4 +326,34 @@ metaData:
     version: "2021-06-10"
     namespacePrefix: "NCBITaxon"
     iriPrefix: "http://purl.obolibrary.org/obo/NCBITaxon_"
+  - id: "hp"
+    name: "human phenotype ontology"
+    url: "http://purl.obolibrary.org/obo/hp.owl"
+    version: "2022-06-11"
+    namespacePrefix: "HP"
+    iriPrefix: "http://purl.obolibrary.org/obo/HP_"
+  - id: "loinc"
+    name: "Logical Observation Identifiers Names and Codes"
+    url: "https://loinc.org"
+    version: "2.73"
+    namespacePrefix: "LOINC"
+    iriPrefix: "https://loinc.org/"
+  - id: "ucum"
+    name: "Unified Code for Units of Measure"
+    url: "https://ucum.org"
+    version: "2.1"
+    namespacePrefix: "UCUM"
+    iriPrefix: "https://units-of-measurement.org/"
+  - id: "geno"
+    name: "Genotype Ontology"
+    url: "http://purl.obolibrary.org/obo/geno.owl"
+    version: "2022-03-05"
+    namespacePrefix: "GENO"
+    iriPrefix: "http://purl.obolibrary.org/obo/GENO_"
+  - id: "drugcentral"
+    name: "Drug Central"
+    url: "https://drugcentral.org/"
+    version: "2022-08-22"
+    namespacePrefix: "DrugCentral"
+    iriPrefix: "https://drugcentral.org/drugcard/"
   phenopacketSchemaVersion: "2.0.0"

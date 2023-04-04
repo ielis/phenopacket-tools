@@ -5,6 +5,7 @@ subject:
     age:
       iso8601duration: "P38Y"
   sex: "MALE"
+  karyotypicSex: "UNKNOWN_KARYOTYPE"
 biosamples:
 - id: "biosample 1"
   individualId: "proband A"
@@ -61,6 +62,7 @@ diseases:
 - term:
     id: "NCIT:C4024"
     label: "Esophageal Squamous Cell Carcinoma"
+  excluded: false
   clinicalTnmFinding:
   - id: "NCIT:C48724"
     label: "T2 Stage Finding"

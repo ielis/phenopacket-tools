@@ -5,10 +5,12 @@ subject:
     age:
       iso8601duration: "P6Y3M"
   sex: "MALE"
+  karyotypicSex: "UNKNOWN_KARYOTYPE"
 phenotypicFeatures:
 - type:
     id: "HP:0001629"
     label: "Ventricular septal defect"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -24,6 +26,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0000280"
     label: "Coarse facial features"
+  excluded: false
   evidence:
   - evidenceCode:
       id: "ECO:0000033"
@@ -35,6 +38,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0008689"
     label: "Bilateral cryptorchidism"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -50,6 +54,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0001561"
     label: "Polyhydramnios"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0011461"
@@ -65,6 +70,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0000054"
     label: "Micropenis"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -80,6 +86,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0001798"
     label: "Anonychia"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -95,6 +102,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0001320"
     label: "Cerebellar vermis hypoplasia"
+  excluded: false
   evidence:
   - evidenceCode:
       id: "ECO:0000033"
@@ -106,6 +114,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0000518"
     label: "Cataract"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003593"
@@ -121,6 +130,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0002198"
     label: "Dilated fourth ventricle"
+  excluded: false
   evidence:
   - evidenceCode:
       id: "ECO:0000033"
@@ -132,6 +142,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0100333"
     label: "Unilateral cleft lip"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003577"
@@ -156,6 +167,7 @@ interpretations:
       interpretationStatus: "CAUSATIVE"
       variantInterpretation:
         acmgPathogenicityClassification: "PATHOGENIC"
+        therapeuticActionability: "UNKNOWN_ACTIONABILITY"
         variationDescriptor:
           id: "variant id"
           geneContext:
@@ -170,6 +182,7 @@ interpretations:
             pos: "45989626"
             ref: "G"
             alt: "A"
+          moleculeContext: "unspecified_molecule_context"
           allelicState:
             id: "GENO:0000135"
             label: "heterozygous"
@@ -189,6 +202,18 @@ metaData:
     version: "2020-03-08"
     namespacePrefix: "GENO"
     iriPrefix: "http://purl.obolibrary.org/obo/GENO_"
+  - id: "eco"
+    name: "Evidence & Conclusion Ontology (ECO)"
+    url: "http://purl.obolibrary.org/obo/eco.owl"
+    version: "2022-08-05"
+    namespacePrefix: "ECO"
+    iriPrefix: "http://purl.obolibrary.org/obo/ECO_"
+  - id: "omim"
+    name: "An Online Catalog of Human Genes and Genetic Disorders"
+    url: "https://www.omim.org"
+    version: "2022-11-23"
+    namespacePrefix: "OMIM"
+    iriPrefix: "https://www.omim.org/entry/"
   phenopacketSchemaVersion: "2.0.0"
   externalReferences:
   - id: "PMID:30808312"

@@ -20,6 +20,7 @@ phenotypicFeatures:
 - type:
     id: "HP:0000545"
     label: "Myopia"
+  excluded: false
   modifiers:
   - id: "HP:0012834"
     label: "Right"
@@ -29,6 +30,7 @@ phenotypicFeatures:
 - type:
     id: "NCIT:C50618"
     label: "Intraocular Pressure Increased"
+  excluded: false
   modifiers:
   - id: "HP:0012834"
     label: "Right"
@@ -36,7 +38,7 @@ phenotypicFeatures:
     age:
       iso8601duration: "P71Y1M"
 - type:
-    id: " HP:0007686"
+    id: "HP:0007686"
     label: "Abnormal pupillary function"
   excluded: true
 - type:
@@ -44,7 +46,7 @@ phenotypicFeatures:
     label: "Phakodonesis"
   excluded: true
 - type:
-    id: " SCTID: 414775001"
+    id: "SNOMEDCT:414775001"
     label: "monovision"
   excluded: true
 measurements:
@@ -80,7 +82,7 @@ measurements:
           label: "Percent Unit"
         value: 100.0
 - assay:
-    id: "SCTID:397312009"
+    id: "SNOMEDCT:397312009"
     label: "Intraocular lens anterior chamber depth"
   value:
     quantity:
@@ -98,7 +100,7 @@ measurements:
     age:
       iso8601duration: "P71Y1M1D"
 - assay:
-    id: "SCTID:397312009"
+    id: "SNOMEDCT:397312009"
     label: "Intraocular lens anterior chamber depth"
   value:
     quantity:
@@ -225,6 +227,7 @@ diseases:
 - term:
     id: "MONDO:0008327"
     label: "exfoliation syndrome"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0003581"
@@ -284,6 +287,7 @@ medicalActions:
       interval:
         start: "2022-07-07T00:00:00Z"
         end: "2022-07-07T00:00:00Z"
+    drugType: "UNKNOWN_DRUG_TYPE"
   treatmentTarget:
     id: "HP:0007906"
     label: "Ocular hypertension"
@@ -331,4 +335,34 @@ metaData:
     version: "2022-06-11"
     namespacePrefix: "HP"
     iriPrefix: "http://purl.obolibrary.org/obo/HP_"
+  - id: "ucum"
+    name: "Unified Code for Units of Measure"
+    url: "https://ucum.org"
+    version: "2.1"
+    namespacePrefix: "UCUM"
+    iriPrefix: "https://units-of-measurement.org/"
+  - id: "loinc"
+    name: "Logical Observation Identifiers Names and Codes"
+    url: "https://loinc.org"
+    version: "2.73"
+    namespacePrefix: "LOINC"
+    iriPrefix: "https://loinc.org/"
+  - id: "mondo"
+    name: "Mondo Disease Ontology"
+    url: "http://purl.obolibrary.org/obo/mondo.obo"
+    version: "2022-04-04"
+    namespacePrefix: "MONDO"
+    iriPrefix: "http://purl.obolibrary.org/obo/MONDO_"
+  - id: "drugcentral"
+    name: "Drug Central"
+    url: "https://drugcentral.org/"
+    version: "2022-08-22"
+    namespacePrefix: "DrugCentral"
+    iriPrefix: "https://drugcentral.org/drugcard/"
+  - id: "snomedct"
+    name: "SNOMED CT"
+    url: "https://www.snomed.org/"
+    version: "2023-03-31"
+    namespacePrefix: "SNOMEDCT"
+    iriPrefix: "https://browser.ihtsdotools.org/?perspective=full&edition=MAIN/2023-03-31&release=&languages=en&conceptId1="
   phenopacketSchemaVersion: "2.0.0"

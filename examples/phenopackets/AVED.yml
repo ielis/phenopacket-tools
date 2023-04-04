@@ -5,16 +5,19 @@ subject:
     age:
       iso8601duration: "P10Y"
   sex: "FEMALE"
+  karyotypicSex: "UNKNOWN_KARYOTYPE"
 phenotypicFeatures:
 - type:
     id: "HP:0001288"
     label: "Gait disturbance"
+  excluded: false
   onset:
     age:
       iso8601duration: "P10Y"
 - type:
     id: "HP:0001324"
     label: "Muscle weakness"
+  excluded: false
   modifiers:
   - id: "HP:0012837"
     label: "Generalized"
@@ -24,48 +27,56 @@ phenotypicFeatures:
 - type:
     id: "HP:0002066"
     label: "Gait ataxia"
+  excluded: false
   onset:
     age:
       iso8601duration: "P16Y"
 - type:
     id: "HP:0001308"
     label: "Tongue fasciculations"
+  excluded: false
   onset:
     age:
       iso8601duration: "P16Y"
 - type:
     id: "HP:0002080"
     label: "Intention tremor"
+  excluded: false
   onset:
     age:
       iso8601duration: "P16Y"
 - type:
     id: "HP:0002075"
     label: "Dysdiadochokinesis"
+  excluded: false
   onset:
     age:
       iso8601duration: "P16Y"
 - type:
     id: "HP:0001251"
     label: "Ataxia"
+  excluded: false
   onset:
     age:
       iso8601duration: "P16Y"
 - type:
     id: "HP:0001284"
     label: "Areflexia"
+  excluded: false
   onset:
     age:
       iso8601duration: "P16Y"
 - type:
     id: "HP:0011448"
     label: "Ankle clonus"
+  excluded: false
   onset:
     age:
       iso8601duration: "P16Y"
 - type:
     id: "HP:0003690"
     label: "Limb muscle weakness"
+  excluded: false
   onset:
     age:
       iso8601duration: "P16Y"
@@ -97,12 +108,12 @@ measurements:
   value:
     quantity:
       unit:
-        id: "UCUM:ug/dL"
+        id: "UCUM:ug.dL-1"
         label: "microgram per deciliter"
       value: 45.0
       referenceRange:
         unit:
-          id: "UCUM:ug/dL"
+          id: "UCUM:ug.dL-1"
           label: "microgram per deciliter"
         low: 20.0
         high: 60.0
@@ -115,12 +126,12 @@ measurements:
   value:
     quantity:
       unit:
-        id: "UCUM:mg/dL"
+        id: "UCUM:mg.dL-1"
         label: "milligram per deciliter"
       value: 3.9
       referenceRange:
         unit:
-          id: "UCUM:mg/dL"
+          id: "UCUM:mg.dL-1"
           label: "milligram per deciliter"
         low: 6.0
         high: 10.0
@@ -133,12 +144,12 @@ measurements:
   value:
     quantity:
       unit:
-        id: "UCUM:U/L"
+        id: "UCUM:U.L-1"
         label: "enzyme unit per liter"
       value: 80.0
       referenceRange:
         unit:
-          id: "UCUM:U/L"
+          id: "UCUM:U.L-1"
           label: "enzyme unit per liter"
         low: 22.0
         high: 198.0
@@ -151,12 +162,12 @@ measurements:
   value:
     quantity:
       unit:
-        id: "UCUM:mg/dL"
+        id: "UCUM:mg.dL-1"
         label: "milligram per deciliter"
       value: 17.34
       referenceRange:
         unit:
-          id: "UCUM:mg/dL"
+          id: "UCUM:mg.dL-1"
           label: "milligram per deciliter"
         low: 6.0
         high: 10.0
@@ -225,6 +236,7 @@ diseases:
 - term:
     id: "MONDO:0100308"
     label: "atactic disorder"
+  excluded: false
   onset:
     ontologyClass:
       id: "HP:0011463"
@@ -237,6 +249,7 @@ medicalActions:
     routeOfAdministration:
       id: "NCIT:C38288"
       label: "Oral Route of Administration"
+    drugType: "UNKNOWN_DRUG_TYPE"
   responseToTreatment:
     id: "NCIT:C123584"
     label: "Favorable Response"
@@ -259,7 +272,7 @@ metaData:
   - id: "mondo"
     name: "Mondo Disease Ontology"
     url: "http://purl.obolibrary.org/obo/mondo.obo"
-    version: "v2022-09-06"
+    version: "2022-04-04"
     namespacePrefix: "MONDO"
     iriPrefix: "http://purl.obolibrary.org/obo/MONDO_"
   - id: "uberon"
@@ -268,6 +281,30 @@ metaData:
     version: "2021-07-27"
     namespacePrefix: "UBERON"
     iriPrefix: "http://purl.obolibrary.org/obo/UBERON_"
+  - id: "loinc"
+    name: "Logical Observation Identifiers Names and Codes"
+    url: "https://loinc.org"
+    version: "2.73"
+    namespacePrefix: "LOINC"
+    iriPrefix: "https://loinc.org/"
+  - id: "ucum"
+    name: "Unified Code for Units of Measure"
+    url: "https://ucum.org"
+    version: "2.1"
+    namespacePrefix: "UCUM"
+    iriPrefix: "https://units-of-measurement.org/"
+  - id: "geno"
+    name: "Genotype Ontology"
+    url: "http://purl.obolibrary.org/obo/geno.owl"
+    version: "2022-03-05"
+    namespacePrefix: "GENO"
+    iriPrefix: "http://purl.obolibrary.org/obo/GENO_"
+  - id: "drugcentral"
+    name: "Drug Central"
+    url: "https://drugcentral.org/"
+    version: "2022-08-22"
+    namespacePrefix: "DrugCentral"
+    iriPrefix: "https://drugcentral.org/drugcard/"
   phenopacketSchemaVersion: "2.0.0"
   externalReferences:
   - id: "doi:10.1002/ccr3.6303"
